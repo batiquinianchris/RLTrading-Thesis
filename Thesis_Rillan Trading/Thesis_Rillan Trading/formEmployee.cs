@@ -67,7 +67,14 @@ namespace Thesis_Rillan_Trading
         // Save Button - saving input to database
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            addEmployee();
+            if (btn_Save.Text == "Update")
+            {
+                editEmp();
+            }
+            else
+            {
+                addEmployee();
+            }
         }
 
         // Info Button - - Create/Find
@@ -270,6 +277,40 @@ namespace Thesis_Rillan_Trading
             }
         }
 
+        //Update emp func
+        private void editEmp()
+        {
+            if (btn_Save.Text == "Update")
+            {
+                try
+                {
+                    String q = "UPDATE employee SET emp_firstName = '" + tbox_firstName.Text + "', emp_middleName = '" + tbox_middleName.Text + "', emp_lastName = '" + tbox_lastName.Text + "', " +
+                        " emp_contactNum = '" + tbox_mobileNum.Text + "', emp_address = '" + tbox_address.Text + "', emp_birthdate = '" + this.dtp_Birthdate.Value.Date.ToString("yyyy-MM-dd") + "', " +
+                        " emp_sex = '" + EmpSex() + "', emp_role = '" + EmpRole() + "', emp_branch = '" + cmbBox_Branch.Text + "', emp_status = '" + EmpStatus() + "', emp_username = '" + tbx_userName.Text + "', " +
+                        " emp_password = '" + tbx_password.Text + "' WHERE emp_id = '" + emp_id + "' ";
+
+                    conn.Open();
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(q, conn);
+                    int count = adapter.SelectCommand.ExecuteNonQuery();
+
+                    if (count >= 1)
+                    {
+                        MessageBox.Show("Employee successfully Updated!");
+                    }
+                    conn.Close();
+                    EmpTableLoad();
+                    fieldsReset();
+                    btn_Save.Text = "Save";
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show(x.ToString());
+                }
+            }
+            btn_Save.Text = "Save";
+            btn_delete.Visible = false;
+        }
+
         private void fieldsReset()
         {
             tbox_firstName.Clear();
@@ -295,6 +336,8 @@ namespace Thesis_Rillan_Trading
                 tbox_mobileNum.BackColor = Color.White;
             }
         }
+
+
 
         //Converting string to int for employee sex
         public int EmpSex()
