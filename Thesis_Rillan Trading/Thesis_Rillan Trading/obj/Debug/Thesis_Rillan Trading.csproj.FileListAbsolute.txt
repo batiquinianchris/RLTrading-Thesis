@@ -30,3 +30,22 @@ D:\Program Files\GitHub\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Tra
 D:\Program Files\GitHub\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\MySql.Data.xml
 D:\Program Files\GitHub\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.csproj.CopyComplete
 D:\Program Files\GitHub\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formAdminSettings.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\Thesis_Rillan Trading.exe.config
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\Thesis_Rillan Trading.exe
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\Thesis_Rillan Trading.pdb
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\MySql.Data.dll
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\Google.Protobuf.dll
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\bin\Debug\MySql.Data.xml
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.csprojAssemblyReference.cache
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formAdminHome.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formAdminSettings.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formCustomer.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formEmployee.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formLogin.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.formSupplier.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan_Trading.Properties.Resources.resources
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.csproj.GenerateResource.cache
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.csproj.CoreCompileInputs.cache
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.csproj.CopyComplete
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.exe
+C:\Users\Ian Chris Batiquin\Desktop\RLTrading-Thesis\Thesis_Rillan Trading\Thesis_Rillan Trading\obj\Debug\Thesis_Rillan Trading.pdb

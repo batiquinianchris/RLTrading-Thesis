@@ -47,8 +47,8 @@
             this.lbl_midName = new System.Windows.Forms.Label();
             this.tbox_firstName = new System.Windows.Forms.TextBox();
             this.lbl_firstName = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioB_deac = new System.Windows.Forms.RadioButton();
+            this.radioB_active = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbBox_Branch = new System.Windows.Forms.ComboBox();
             this.lbl_Branch = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnl_userSettings = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbx_userName = new System.Windows.Forms.TextBox();
+            this.tbx_password = new System.Windows.Forms.TextBox();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.picBox_Search = new System.Windows.Forms.PictureBox();
             this.panel_empInfo.SuspendLayout();
@@ -108,10 +112,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(293, 23);
+            this.label5.Size = new System.Drawing.Size(172, 18);
             this.label5.TabIndex = 15;
             this.label5.Text = "Employee Information";
             // 
@@ -259,27 +263,27 @@
             this.lbl_firstName.TabIndex = 2;
             this.lbl_firstName.Text = "First Name";
             // 
-            // radioButton1
+            // radioB_deac
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(493, 71);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(101, 24);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Deactivate";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioB_deac.AutoSize = true;
+            this.radioB_deac.Location = new System.Drawing.Point(493, 71);
+            this.radioB_deac.Name = "radioB_deac";
+            this.radioB_deac.Size = new System.Drawing.Size(101, 24);
+            this.radioB_deac.TabIndex = 21;
+            this.radioB_deac.TabStop = true;
+            this.radioB_deac.Text = "Deactivate";
+            this.radioB_deac.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioB_active
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(493, 36);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 24);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Active";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioB_active.AutoSize = true;
+            this.radioB_active.Location = new System.Drawing.Point(493, 36);
+            this.radioB_active.Name = "radioB_active";
+            this.radioB_active.Size = new System.Drawing.Size(71, 24);
+            this.radioB_active.TabIndex = 20;
+            this.radioB_active.TabStop = true;
+            this.radioB_active.Text = "Active";
+            this.radioB_active.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -294,6 +298,9 @@
             // cmbBox_Branch
             // 
             this.cmbBox_Branch.FormattingEnabled = true;
+            this.cmbBox_Branch.Items.AddRange(new object[] {
+            "AL",
+            "RL"});
             this.cmbBox_Branch.Location = new System.Drawing.Point(103, 70);
             this.cmbBox_Branch.Name = "cmbBox_Branch";
             this.cmbBox_Branch.Size = new System.Drawing.Size(273, 28);
@@ -312,6 +319,9 @@
             // comboBox_role
             // 
             this.comboBox_role.FormattingEnabled = true;
+            this.comboBox_role.Items.AddRange(new object[] {
+            "Cashier",
+            "Sales Person"});
             this.comboBox_role.Location = new System.Drawing.Point(103, 33);
             this.comboBox_role.Name = "comboBox_role";
             this.comboBox_role.Size = new System.Drawing.Size(273, 28);
@@ -334,7 +344,7 @@
             this.btn_Save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Snow;
             this.btn_Save.Location = new System.Drawing.Point(10, 695);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
@@ -376,7 +386,7 @@
             this.btn_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.Snow;
             this.btn_delete.Location = new System.Drawing.Point(168, 695);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
@@ -389,11 +399,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(12, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(522, 28);
+            this.label2.Size = new System.Drawing.Size(383, 24);
             this.label2.TabIndex = 21;
             this.label2.Text = "EMPLOYEE MANAGEMENT SETTINGS";
             // 
@@ -517,13 +527,17 @@
             this.pnl_userSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_userSettings.Controls.Add(this.label6);
-            this.pnl_userSettings.Controls.Add(this.radioButton1);
-            this.pnl_userSettings.Controls.Add(this.radioButton2);
+            this.pnl_userSettings.Controls.Add(this.radioB_deac);
+            this.pnl_userSettings.Controls.Add(this.radioB_active);
+            this.pnl_userSettings.Controls.Add(this.label7);
             this.pnl_userSettings.Controls.Add(this.lbl_role);
             this.pnl_userSettings.Controls.Add(this.label4);
             this.pnl_userSettings.Controls.Add(this.comboBox_role);
+            this.pnl_userSettings.Controls.Add(this.label8);
             this.pnl_userSettings.Controls.Add(this.lbl_Branch);
             this.pnl_userSettings.Controls.Add(this.cmbBox_Branch);
+            this.pnl_userSettings.Controls.Add(this.tbx_userName);
+            this.pnl_userSettings.Controls.Add(this.tbx_password);
             this.pnl_userSettings.Location = new System.Drawing.Point(327, 581);
             this.pnl_userSettings.Name = "pnl_userSettings";
             this.pnl_userSettings.Size = new System.Drawing.Size(958, 110);
@@ -532,13 +546,49 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(16, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 23);
+            this.label6.Size = new System.Drawing.Size(141, 18);
             this.label6.TabIndex = 16;
             this.label6.Text = "USER SETTINGS";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(605, 33);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Username";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(611, 73);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Password";
+            // 
+            // tbx_userName
+            // 
+            this.tbx_userName.Location = new System.Drawing.Point(690, 30);
+            this.tbx_userName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbx_userName.Name = "tbx_userName";
+            this.tbx_userName.Size = new System.Drawing.Size(210, 27);
+            this.tbx_userName.TabIndex = 3;
+            // 
+            // tbx_password
+            // 
+            this.tbx_password.Location = new System.Drawing.Point(690, 71);
+            this.tbx_password.Margin = new System.Windows.Forms.Padding(2);
+            this.tbx_password.Name = "tbx_password";
+            this.tbx_password.Size = new System.Drawing.Size(210, 27);
+            this.tbx_password.TabIndex = 3;
             // 
             // btn_refresh
             // 
@@ -548,7 +598,7 @@
             this.btn_refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refresh.Font = new System.Drawing.Font("LuloCleanW01-One", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_refresh.Image = global::Thesis_Rillan_Trading.Properties.Resources.icons8_Refresh_32px;
             this.btn_refresh.Location = new System.Drawing.Point(795, 64);
             this.btn_refresh.Margin = new System.Windows.Forms.Padding(2);
@@ -564,7 +614,7 @@
             this.picBox_Search.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Search.Image")));
             this.picBox_Search.Location = new System.Drawing.Point(835, 64);
             this.picBox_Search.Name = "picBox_Search";
-            this.picBox_Search.Size = new System.Drawing.Size(35, 35);
+            this.picBox_Search.Size = new System.Drawing.Size(32, 32);
             this.picBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picBox_Search.TabIndex = 19;
             this.picBox_Search.TabStop = false;
@@ -574,7 +624,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1297, 778);
+            this.ClientSize = new System.Drawing.Size(1289, 770);
             this.ControlBox = false;
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.pnl_userSettings);
@@ -645,8 +695,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_DateTime;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioB_deac;
+        private System.Windows.Forms.RadioButton radioB_active;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbBox_Branch;
         private System.Windows.Forms.Label lbl_Branch;
@@ -656,5 +706,9 @@
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Logout;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbx_userName;
+        private System.Windows.Forms.TextBox tbx_password;
     }
 }
