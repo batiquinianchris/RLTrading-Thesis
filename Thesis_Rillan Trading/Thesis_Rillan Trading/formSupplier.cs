@@ -231,47 +231,74 @@ namespace Thesis_Rillan_Trading
 
         private void picBox_Search_Click(object sender, EventArgs e)
         {
-            if (cmbBox_filter.Text != "Filter By") {
+            if (cmbBox_filter.Text != "Filter By")
+            {
                 if (cmbBox_filter.SelectedItem.ToString() == "Supplier Name")
                 {
-                    if (FieldIsString(tbox_Search.Text))
+                    try
                     {
-                        try
-                        {
-                            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM supplier WHERE supp_name LIKE '" + tbox_Search.Text + "%'", conn);
-                            DataTable data = new DataTable();
-                            sda.Fill(data);
-                            dataGV_supplier.DataSource = data;
-                        }
-                        catch (Exception x)
-                        {
-                            MessageBox.Show(x.ToString());
-                        }
+                        adapter = new MySqlDataAdapter("SELECT * FROM supplier WHERE supp_name LIKE '" + tbox_Search.Text + "%'", conn);
+                        dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGV_supplier.DataSource = dataTable;
                     }
-                    else
+                    catch (Exception x)
                     {
-                        MessageBox.Show("Do not use numbers.");
+                        MessageBox.Show(x.ToString());
                     }
                 }
+                else if(cmbBox_filter.SelectedItem.ToString() == "Fax Number")
+                {
+                    try
+                    {
+                        adapter = new MySqlDataAdapter("SELECT * FROM supplier WHERE supp_faxNum LIKE '" + tbox_Search.Text + "%'", conn);
+                        dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGV_supplier.DataSource = dataTable;
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(x.ToString());
+                    }
+                }
+                else if (cmbBox_filter.SelectedItem.ToString() == "Contact Number")
+                {
+                    try
+                    {
+                        adapter = new MySqlDataAdapter("SELECT * FROM supplier WHERE supp_contactNum LIKE '" + tbox_Search.Text + "%'", conn);
+                        dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGV_supplier.DataSource = dataTable;
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(x.ToString());
+                    }
+                }
+                else if (cmbBox_filter.SelectedItem.ToString() == "Address")
+                {
+                    try
+                    {
+                        adapter = new MySqlDataAdapter("SELECT * FROM supplier WHERE supp_address LIKE '" + tbox_Search.Text + "%'", conn);
+                        dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGV_supplier.DataSource = dataTable;
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(x.ToString());
+                    }
+                }
+
             }
             else
             {
-                MessageBox.Show("Select filter for search");
+                MessageBox.Show("Please select filter for search");
             }
+            
+            
         }
-
-        private Boolean FieldIsString(String i)
-        {
-            if(tbox_Search.Text is String)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
+        
         private void btn_refresh_Click(object sender, EventArgs e)
         {
             SuppTableLoad();
