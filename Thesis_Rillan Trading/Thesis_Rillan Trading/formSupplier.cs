@@ -87,9 +87,9 @@ namespace Thesis_Rillan_Trading
             {
                 supp_id = int.Parse(dataGV_supplier.SelectedRows[0].Cells[0].Value.ToString());
                 tbox_supplierName.Text = dataGV_supplier.SelectedRows[0].Cells[1].Value.ToString();
-                tbox_faxNum.Text = dataGV_supplier.SelectedRows[0].Cells[2].Value.ToString();
+                tbox_faxNum.Text = dataGV_supplier.SelectedRows[0].Cells[4].Value.ToString();
                 tbox_contactNum.Text = dataGV_supplier.SelectedRows[0].Cells[3].Value.ToString();
-                tbox_supplierAddress.Text = dataGV_supplier.SelectedRows[0].Cells[4].Value.ToString();
+                tbox_supplierAddress.Text = dataGV_supplier.SelectedRows[0].Cells[2].Value.ToString();
                 
                 /*tbox_firstName.BackColor = Color.LightBlue;
                 tbox_lastName.BackColor = Color.LightBlue;
@@ -182,7 +182,7 @@ namespace Thesis_Rillan_Trading
             {
                 try
                 {
-                    String q = "UPDATE employee SET supp_name = '" + tbox_supplierName.Text + "', supp_faxNum = '" + tbox_faxNum.Text + "', " +
+                    String q = "UPDATE supplier SET supp_name = '" + tbox_supplierName.Text + "', supp_faxNum = '" + tbox_faxNum.Text + "', " +
                         " supp_contactNum = '" + tbox_contactNum.Text + "', supp_address = '" + tbox_supplierAddress.Text + "' WHERE supp_id = '" + supp_id + "' ";
 
                     conn.Open();
@@ -194,6 +194,7 @@ namespace Thesis_Rillan_Trading
                         MessageBox.Show("Employee successfully Updated!");
                     }
                     conn.Close();
+
                     SuppTableLoad();
                     fieldsReset();
                     btn_Save.Text = "Save";
@@ -214,7 +215,24 @@ namespace Thesis_Rillan_Trading
             tbox_contactNum.Clear();
             tbox_supplierAddress.Clear();
         }
-        
 
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (btn_delete.Text == "Cancel")
+            {
+                fieldsReset();
+                btn_delete.Visible = false;
+            }
+        }
+
+        private void tbox_Search_TextChanged(object sender, EventArgs e)
+        {
+            tbox_Search.Clear()
+        }
+
+        private void picBox_Search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

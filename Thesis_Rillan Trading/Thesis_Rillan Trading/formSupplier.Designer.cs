@@ -168,6 +168,7 @@
             this.btn_delete.TabIndex = 29;
             this.btn_delete.Text = "DELETE";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_Save
             // 
@@ -287,6 +288,7 @@
             this.picBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picBox_Search.TabIndex = 29;
             this.picBox_Search.TabStop = false;
+            this.picBox_Search.Click += new System.EventHandler(this.picBox_Search_Click);
             // 
             // cmbBox_filter
             // 
@@ -311,6 +313,7 @@
             this.tbox_Search.Size = new System.Drawing.Size(239, 27);
             this.tbox_Search.TabIndex = 27;
             this.tbox_Search.Text = "Search";
+            this.tbox_Search.TextChanged += new System.EventHandler(this.tbox_Search_TextChanged);
             // 
             // btn_Back
             // 
