@@ -81,9 +81,50 @@ namespace Thesis_Rillan_Trading
 
         }
 
+        //If user click the cell's content, informations will apear to the fields
         private void dataGV_Emp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (MessageBox.Show("Do you want to edit this employee's details?", "Edit employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                emp_id = int.Parse(dataGV_Emp.SelectedRows[0].Cells[0].Value.ToString());
+                tbox_firstName.Text = dataGV_Emp.SelectedRows[0].Cells[1].Value.ToString();
+                tbox_middleName.Text = dataGV_Emp.SelectedRows[0].Cells[2].Value.ToString();
+                tbox_lastName.Text = dataGV_Emp.SelectedRows[0].Cells[3].Value.ToString();
+                tbox_mobileNum.Text = dataGV_Emp.SelectedRows[0].Cells[4].Value.ToString();
+                tbox_address.Text = dataGV_Emp.SelectedRows[0].Cells[5].Value.ToString();
+                dtp_Birthdate.Text = dataGV_Emp.SelectedRows[0].Cells[6].Value.ToString();
+                comboBox_role.Text = dataGV_Emp.SelectedRows[0].Cells[8].Value.ToString();
+                cmbBox_Branch.Text = dataGV_Emp.SelectedRows[0].Cells[9].Value.ToString();
+                tbx_userName.Text = dataGV_Emp.SelectedRows[0].Cells[11].Value.ToString();
+                tbx_password.Text = dataGV_Emp.SelectedRows[0].Cells[12].Value.ToString();
+                
+                if (dataGV_Emp.SelectedRows[0].Cells[7].Value.ToString() == "Male")
+                {
+                    rdbtn_sexMale.Checked = true;
+                }
+                else
+                {
+                    rdbtn_sexFemale.Checked = true;
+                }
 
+                if (dataGV_Emp.SelectedRows[0].Cells[10].Value.ToString() == "Active")
+                {
+                    radioB_active.Checked = true;
+                }
+                else
+                {
+                    radioB_deac.Checked = true;
+                }
+
+                /*tbox_firstName.BackColor = Color.LightBlue;
+                tbox_lastName.BackColor = Color.LightBlue;
+                tbox_middleName.BackColor = Color.LightBlue;
+                tbox_mobileNum.BackColor = Color.LightBlue;*/
+                btn_delete.Text = "Cancel";
+                btn_Save.Text = "Update";
+                btn_delete.Visible = true;
+
+            }
         }
 
         private void lbl_lastName_Click(object sender, EventArgs e)
@@ -240,6 +281,11 @@ namespace Thesis_Rillan_Trading
             comboBox_role.Text = " ";
             rdbtn_sexMale.Checked = false;
             rdbtn_sexFemale.Checked = false;
+            radioB_active.Checked = false;
+            radioB_deac.Checked = false;
+            tbx_password.Clear();
+            tbx_userName.Clear();
+            cmbBox_Branch.Text = " ";
 
             if (btn_Save.Text == "Update")
             {
@@ -292,6 +338,13 @@ namespace Thesis_Rillan_Trading
             }
         }
 
-
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if(btn_delete.Text == "Cancel")
+            {
+                fieldsReset();
+                btn_delete.Visible = false;
+            }
+        }
     }
 }

@@ -349,7 +349,7 @@
             this.btn_Save.Location = new System.Drawing.Point(10, 695);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(154, 38);
+            this.btn_Save.Size = new System.Drawing.Size(313, 38);
             this.btn_Save.TabIndex = 3;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -388,13 +388,15 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.Snow;
-            this.btn_delete.Location = new System.Drawing.Point(168, 695);
+            this.btn_delete.Location = new System.Drawing.Point(327, 696);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(154, 38);
             this.btn_delete.TabIndex = 20;
             this.btn_delete.Text = "DELETE";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Visible = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // label2
             // 
