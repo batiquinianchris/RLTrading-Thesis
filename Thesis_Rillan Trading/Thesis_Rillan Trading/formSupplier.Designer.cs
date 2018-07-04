@@ -159,9 +159,9 @@
             this.btn_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.Snow;
-            this.btn_delete.Location = new System.Drawing.Point(168, 525);
+            this.btn_delete.Location = new System.Drawing.Point(327, 525);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(154, 38);
@@ -176,24 +176,25 @@
             this.btn_Save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Snow;
             this.btn_Save.Location = new System.Drawing.Point(10, 525);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(154, 38);
+            this.btn_Save.Size = new System.Drawing.Size(312, 38);
             this.btn_Save.TabIndex = 28;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("LuloCleanW01-OneBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(23, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 28);
+            this.label2.Size = new System.Drawing.Size(246, 24);
             this.label2.TabIndex = 31;
             this.label2.Text = "SUPPLIER MASTER LIST";
             // 
@@ -206,8 +207,9 @@
             this.dataGV_supplier.Name = "dataGV_supplier";
             this.dataGV_supplier.RowTemplate.Height = 24;
             this.dataGV_supplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGV_supplier.Size = new System.Drawing.Size(767, 450);
+            this.dataGV_supplier.Size = new System.Drawing.Size(767, 408);
             this.dataGV_supplier.TabIndex = 32;
+            this.dataGV_supplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_supplier_CellContentClick);
             // 
             // pnl_Footer
             // 

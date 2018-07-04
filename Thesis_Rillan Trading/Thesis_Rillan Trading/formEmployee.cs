@@ -30,7 +30,6 @@ namespace Thesis_Rillan_Trading
         public formEmployee()
         {
             InitializeComponent();
-
             conn = new MySqlConnection("Server=localhost; Database=rillan_trading; Uid=root; Pwd=root;");
         }
 
