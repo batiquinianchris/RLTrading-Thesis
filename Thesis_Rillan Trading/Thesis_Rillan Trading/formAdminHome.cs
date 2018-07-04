@@ -21,6 +21,8 @@ namespace Thesis_Rillan_Trading
         //- - - Variable for Form Reference - - -
         public Form refLogin { get; set; } 
         public Form refEmployee { get; set; }
+        public Form refSupplier { get; set; }
+
         public int ref_empID;
         
         public formAdminHome()
@@ -32,7 +34,8 @@ namespace Thesis_Rillan_Trading
         //- - - Form Load - - -
         private void formAdminHome_Load(object sender, EventArgs e)
         {
-
+            timer.Start();
+            lbl_DateTime.Text = DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToLongDateString();
         }
 
         //- - - Login Buttons - - - 
@@ -55,14 +58,17 @@ namespace Thesis_Rillan_Trading
 
         }
 
+        private void btn_Supplier_Click(object sender, EventArgs e)
+        {
+            formSupplier fSupplier = new formSupplier();
+            fSupplier.refAdminHome = this;
+            fSupplier.Show();
+            this.Hide();
+        }
+
         private void btn_Customer_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_Employee_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btn_Reports_Click(object sender, EventArgs e)
@@ -99,6 +105,15 @@ namespace Thesis_Rillan_Trading
 
         }
 
-        
+        // - - When user wants to close window - - 
+        private void formAdminHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formLogin fLogin = new formLogin();
+            fLogin.refAdminHome = this;
+            fLogin.Show();
+            this.Close();
+        }
+
+
     }
 }

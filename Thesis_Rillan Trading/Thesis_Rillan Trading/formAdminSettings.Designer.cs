@@ -108,7 +108,6 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("LuloCleanW01-One", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Thesis_Rillan_Trading.Properties.Resources.icons8_Profile_100px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(61, 56);
             this.button1.Name = "button1";
@@ -134,7 +133,6 @@
             // 
             this.btn_Logout.FlatAppearance.BorderSize = 0;
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.Image = global::Thesis_Rillan_Trading.Properties.Resources.icons8_Exit_32px;
             this.btn_Logout.Location = new System.Drawing.Point(597, 4);
             this.btn_Logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Logout.Name = "btn_Logout";
@@ -144,7 +142,6 @@
             // 
             // picBox_User
             // 
-            this.picBox_User.Image = global::Thesis_Rillan_Trading.Properties.Resources.icons8_Male_User_32px;
             this.picBox_User.Location = new System.Drawing.Point(23, 7);
             this.picBox_User.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBox_User.Name = "picBox_User";

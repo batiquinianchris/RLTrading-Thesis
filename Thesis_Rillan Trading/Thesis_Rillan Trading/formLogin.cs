@@ -21,8 +21,11 @@ namespace Thesis_Rillan_Trading
         //Variables
         public Form refAdminHome { get; set; }
         public Form refEmployee { get; set; }
+        public Form refSupplier { get; set; }
 
         public int empID;
+        string username, password;
+        int stat;
 
         public formLogin()
         {
@@ -32,6 +35,9 @@ namespace Thesis_Rillan_Trading
 
         private void formLogin_Load(object sender, EventArgs e)
         {
+            timer.Start();
+            lbl_dateTime.Text = DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToLongDateString();
+
             try
             {
                 conn.Open();
@@ -49,6 +55,21 @@ namespace Thesis_Rillan_Trading
             }
         }
 
+        private void tbox_Username_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbox_Username.Text = "";
+        }
+
+        private void tbox_Password_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbox_Password.Text = "";
+        }
+
+        private void formLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose(); // clean memory
+        }
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
             try
@@ -64,28 +85,23 @@ namespace Thesis_Rillan_Trading
                     conn.Open(); // Connection opened
 
                     // Get data from DB
-                    MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE emp_username = '" + tbox_Username.Text + "' AND emp_password = '" + tbox_Password.Text + "'", conn);
+                    MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE emp_username = '" + tbox_Username.Text + "' AND emp_password = '" + 
+                        tbox_Password.Text + "'", conn);
                     MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     conn.Close();
 
-
+                    
                     if (dt.Rows.Count == 1) // DB returned 1 row  
                     {
-                        string username, password;
-                        int stat;
-
+                        
                         // gets data from DB >> pass the values to its corresponding variables
                         username = dt.Rows[0]["emp_username"].ToString();
                         password = dt.Rows[0]["emp_password"].ToString();
                         stat = int.Parse(dt.Rows[0]["emp_status"].ToString());
                         empID = int.Parse(dt.Rows[0]["emp_id"].ToString());
-
-                        if (tbox_Username.Text != username || tbox_Password.Text != password)
-                        {
-                            MessageBox.Show("The user credentials are incorrect.", "", MessageBoxButtons.OK);
-                        }
+                        
 
                         if (tbox_Username.Text == username && tbox_Password.Text == password)
                         {
@@ -106,6 +122,10 @@ namespace Thesis_Rillan_Trading
                         }
                         
                     }
+                    else if (tbox_Username.Text != username || tbox_Password.Text != password)
+                    {
+                        MessageBox.Show("The user credentials are incorrect.", "Error!", MessageBoxButtons.OK);
+                    }
                 }
             }
             catch (Exception ee)
@@ -115,6 +135,8 @@ namespace Thesis_Rillan_Trading
             }
             
         }
+
+
 
 
     }

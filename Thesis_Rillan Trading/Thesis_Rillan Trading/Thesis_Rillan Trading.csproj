@@ -105,18 +105,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -125,39 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\002-business.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\003-network.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\005-sale-report.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\001-get-money - Copy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\004-packing - Copy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Circled_User_Female_Skin_Type_4_96px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Export_96px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Export_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Settings_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Cash_in_Hand_12px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Cash_in_Hand_100px.png" />
@@ -169,32 +136,25 @@
     <None Include="Resources\icons8_Customer_100px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_Profile_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_Ratings_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_User_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Male_User_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Back_32px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Info_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Search_32px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Supplier_100px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\icons8_Edit_100px.png" />
-    <None Include="Resources\icons8_Edit_100px1.png" />
+    <None Include="Resources\icons8_Back_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Refresh_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sign_Out_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
