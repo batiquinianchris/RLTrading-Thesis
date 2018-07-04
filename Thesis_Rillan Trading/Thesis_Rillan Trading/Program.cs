@@ -16,7 +16,7 @@ namespace Thesis_Rillan_Trading
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formSupplier());
+            Application.Run(new formEmployee());
         }
     }
 }

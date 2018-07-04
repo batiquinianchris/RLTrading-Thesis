@@ -168,6 +168,7 @@
             this.btn_delete.TabIndex = 29;
             this.btn_delete.Text = "DELETE";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Visible = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_Save
@@ -277,6 +278,7 @@
             this.btn_refresh.TabIndex = 30;
             this.btn_refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // picBox_Search
             // 
@@ -296,6 +298,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBox_filter.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.cmbBox_filter.FormattingEnabled = true;
+            this.cmbBox_filter.Items.AddRange(new object[] {
+            "Supplier Name",
+            "Fax Number",
+            "Contact Number",
+            "Address"});
             this.cmbBox_filter.Location = new System.Drawing.Point(929, 74);
             this.cmbBox_filter.Name = "cmbBox_filter";
             this.cmbBox_filter.Size = new System.Drawing.Size(165, 28);

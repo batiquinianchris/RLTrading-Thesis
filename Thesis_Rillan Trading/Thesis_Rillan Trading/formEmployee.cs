@@ -388,5 +388,59 @@ namespace Thesis_Rillan_Trading
                 btn_delete.Visible = false;
             }
         }
+
+        private void picBox_Search_Click(object sender, EventArgs e)
+        {
+            if (cmbBox_filter.Text != "Filter By")
+            {
+                if (cmbBox_filter.SelectedItem.ToString() == "Last Name")
+                {
+                    if (FieldIsString(tbox_Search.Text))
+                    {
+                        try
+                        {
+                            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM employee WHERE emp_lastName LIKE '" + tbox_Search.Text + "%'", conn);
+                            DataTable data = new DataTable();
+                            sda.Fill(data);
+                            dataGV_Emp.DataSource = data;
+                        }
+                        catch (Exception x)
+                        {
+                            MessageBox.Show(x.ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Do not use numbers.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select filter for search");
+            }
+        }
+
+        private Boolean FieldIsString(String i)
+        {
+            if (tbox_Search.Text is String)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            EmpTableLoad();
+        }
+
+        private void btn_refresh_Click_1(object sender, EventArgs e)
+        {
+            EmpTableLoad();
+        }
     }
 }

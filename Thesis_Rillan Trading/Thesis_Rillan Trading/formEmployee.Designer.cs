@@ -373,6 +373,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBox_filter.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.cmbBox_filter.FormattingEnabled = true;
+            this.cmbBox_filter.Items.AddRange(new object[] {
+            "First Name",
+            "Middle Name",
+            "Last Name",
+            "Address",
+            "Contact Number",
+            "Birthdate",
+            "Role",
+            "Sex",
+            "Branch",
+            "Status"});
             this.cmbBox_filter.Location = new System.Drawing.Point(1119, 69);
             this.cmbBox_filter.Name = "cmbBox_filter";
             this.cmbBox_filter.Size = new System.Drawing.Size(165, 28);
@@ -403,7 +414,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(12, 67);
+            this.label2.Location = new System.Drawing.Point(13, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(383, 24);
             this.label2.TabIndex = 21;
@@ -433,6 +444,7 @@
             this.pnl_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Header.Controls.Add(this.btn_Back);
             this.pnl_Header.Controls.Add(this.btn_Logout);
+            this.pnl_Header.Controls.Add(this.label2);
             this.pnl_Header.ForeColor = System.Drawing.Color.SteelBlue;
             this.pnl_Header.Location = new System.Drawing.Point(-2, -2);
             this.pnl_Header.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -609,6 +621,7 @@
             this.btn_refresh.TabIndex = 26;
             this.btn_refresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click_1);
             // 
             // picBox_Search
             // 
@@ -620,6 +633,7 @@
             this.picBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picBox_Search.TabIndex = 19;
             this.picBox_Search.TabStop = false;
+            this.picBox_Search.Click += new System.EventHandler(this.picBox_Search_Click);
             // 
             // formEmployee
             // 
@@ -633,7 +647,6 @@
             this.Controls.Add(this.pnl_Footer);
             this.Controls.Add(this.pnl_Header);
             this.Controls.Add(this.dataGV_Emp);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.picBox_Search);
             this.Controls.Add(this.cmbBox_filter);
@@ -655,6 +668,7 @@
             this.panel_empInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_Emp)).EndInit();
             this.pnl_Header.ResumeLayout(false);
+            this.pnl_Header.PerformLayout();
             this.pnl_Footer.ResumeLayout(false);
             this.pnl_Footer.PerformLayout();
             this.pnl_userSettings.ResumeLayout(false);
