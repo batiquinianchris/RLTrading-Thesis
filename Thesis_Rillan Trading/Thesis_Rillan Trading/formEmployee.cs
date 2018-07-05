@@ -310,7 +310,7 @@ namespace Thesis_Rillan_Trading
             btn_delete.Visible = false;
         }
 
-        private void fieldsReset()
+        private void fieldsReset() //clears the textbox fields
         {
             tbox_firstName.Clear();
             tbox_middleName.Clear();
@@ -389,7 +389,7 @@ namespace Thesis_Rillan_Trading
             }
         }
 
-        private void picBox_Search_Click(object sender, EventArgs e)
+        private void picBox_Search_Click(object sender, EventArgs e) 
         {
             if (cmbBox_filter.Text != "Filter By")
             {

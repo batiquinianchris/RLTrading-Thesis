@@ -81,7 +81,7 @@ namespace Thesis_Rillan_Trading
             }
         }
 
-        private void dataGV_supplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGV_supplier_CellContentClick(object sender, DataGridViewCellEventArgs e) //puts the selected cell content to the textbox fields for editing
         {
             if (MessageBox.Show("Do you want to edit this employee's details?", "Edit employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -103,7 +103,7 @@ namespace Thesis_Rillan_Trading
             }
         }
 
-        private void SuppTableLoad()
+        private void SuppTableLoad() //loads all data in supplier's table to the data grid
         {
             try
             {
@@ -130,7 +130,7 @@ namespace Thesis_Rillan_Trading
         }
 
         //Create supplier function
-        private void addSupplier()
+        private void addSupplier() //create function
         {
             //Validation
             if (string.IsNullOrWhiteSpace(tbox_supplierName.Text.ToString()))
@@ -176,7 +176,7 @@ namespace Thesis_Rillan_Trading
             }
         }
 
-        private void editSupplier()
+        private void editSupplier() //edit function
         {
             if (btn_Save.Text == "Update")
             {
@@ -208,7 +208,7 @@ namespace Thesis_Rillan_Trading
             btn_delete.Visible = false;
         }
 
-        private void fieldsReset()
+        private void fieldsReset() //clears all the textbox fields
         {
             tbox_supplierName.Clear();
             tbox_faxNum.Clear();
@@ -216,7 +216,7 @@ namespace Thesis_Rillan_Trading
             tbox_supplierAddress.Clear();
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void btn_delete_Click(object sender, EventArgs e) //Disappers when user does not want to edit
         {
             if (btn_delete.Text == "Cancel")
             {
@@ -229,11 +229,12 @@ namespace Thesis_Rillan_Trading
         {
         }
 
+        //Search function
         private void picBox_Search_Click(object sender, EventArgs e)
         {
             if (cmbBox_filter.Text != "Filter By")
             {
-                if (cmbBox_filter.SelectedItem.ToString() == "Supplier Name")
+                if (cmbBox_filter.SelectedItem.ToString() == "Supplier Name") //Filters supplier's name
                 {
                     try
                     {
@@ -247,7 +248,7 @@ namespace Thesis_Rillan_Trading
                         MessageBox.Show(x.ToString());
                     }
                 }
-                else if(cmbBox_filter.SelectedItem.ToString() == "Fax Number")
+                else if(cmbBox_filter.SelectedItem.ToString() == "Fax Number") //Filters supplier's fax number
                 {
                     try
                     {
@@ -261,7 +262,7 @@ namespace Thesis_Rillan_Trading
                         MessageBox.Show(x.ToString());
                     }
                 }
-                else if (cmbBox_filter.SelectedItem.ToString() == "Contact Number")
+                else if (cmbBox_filter.SelectedItem.ToString() == "Contact Number") //Filters supplier's contact number
                 {
                     try
                     {
@@ -275,7 +276,7 @@ namespace Thesis_Rillan_Trading
                         MessageBox.Show(x.ToString());
                     }
                 }
-                else if (cmbBox_filter.SelectedItem.ToString() == "Address")
+                else if (cmbBox_filter.SelectedItem.ToString() == "Address") //Filters supplier's address
                 {
                     try
                     {
@@ -299,7 +300,7 @@ namespace Thesis_Rillan_Trading
             
         }
         
-        private void btn_refresh_Click(object sender, EventArgs e)
+        private void btn_refresh_Click(object sender, EventArgs e) //refreshes the data grid
         {
             SuppTableLoad();
         }
